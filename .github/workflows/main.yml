@@ -22,3 +22,14 @@ jobs:
         azcliversion: 2.9.0
         inlineScript: |
           az group create --name RG-AKS-000-Basic --location eastus2
+
+    - name: Git - Get Sources
+      uses: actions/checkout@master
+
+    - name: Azure - Login ARM
+      uses: Azure/github-actions/login@master
+      env:
+        AZURE_SUBSCRIPTION: Peter_Azure
+        AZURE_SERVICE_APP_ID: ${{ secrets.AZURE_SERVICE_APP_ID }}
+        AZURE_SERVICE_PASSWORD: ${{ secrets.AZURE_SERVICE_PASSWORD }}
+        AZURE_SERVICE_TENANT: ${{ secrets.AZURE_SERVICE_TENANT }}
