@@ -1,0 +1,17 @@
+name: Workflow deploiement basic d'un cluster AKS
+on:
+  push:
+    branches:
+    - master
+    path:
+    - Applications
+
+jobs:
+  build-and-deploy:
+    name: deploiement dans Azure
+    runs-on: ubuntu-latest
+    steps:
+    - name: Azure Login Az Cli
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
