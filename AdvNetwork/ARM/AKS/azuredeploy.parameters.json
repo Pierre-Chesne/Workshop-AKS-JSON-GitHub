@@ -1,0 +1,35 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "Clust-AKS-001"
+        },
+        "dnsPrefix": {
+            "value": "Clust-AKS-001-dns"
+        },
+        "existingServicePrincipalObjectId": {
+            "value": "71254598-b7c7-4b51-b428-fbab54335ac3"
+        },
+        "existingServicePrincipalClientId": {
+            "value": "29c9a556-1fc8-4df4-9610-82fae1e4f8e5"
+        },
+        "existingServicePrincipalClientSecret": {
+            "reference": {
+                "keyVault": {
+                    "id": "/subscriptions/95014b70-0907-44b9-a33f-229e4842ae85/resourceGroups/RG-KeyVault/providers/Microsoft.KeyVault/vaults/KeyVaultPierrc"
+                },
+                "secretName": "secretspnPierrcAKS"
+            }
+        },
+        "existingVirtualNetworkName": {
+            "value": "Clust-AKS-001-vnet"
+        },
+        "existingVirtualNetworkResourceGroup": {
+            "value": "RG-AKS-001-Adv"
+        },
+        "existingSubnetName": {
+            "value": "default"
+        }
+    }
+}

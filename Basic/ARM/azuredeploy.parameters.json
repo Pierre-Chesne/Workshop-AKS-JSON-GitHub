@@ -1,0 +1,44 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "clusterName": {
+            "value": "Clust-AKS-000"
+        },
+        "dnsPrefix": {
+            "value": "Clust-AKS-000-dns"
+        },
+        "linuxAdminUsername": {
+            "value": "pierrc"
+        },
+        "sshRSAPublicKey": {
+            "reference": {
+                "keyVault": {
+                    "id":"/subscriptions/95014b70-0907-44b9-a33f-229e4842ae85/resourceGroups/RG-KeyVault/providers/Microsoft.KeyVault/vaults/KeyVaultPierrc"
+                },
+                "secretName": "PublicKey"
+            }
+        },
+        "servicePrincipalClientId": {
+            "value": "29c9a556-1fc8-4df4-9610-82fae1e4f8e5"
+        },
+        "servicePrincipalClientSecret": {
+            "reference": {
+                "keyVault": {
+                    "id":"/subscriptions/95014b70-0907-44b9-a33f-229e4842ae85/resourceGroups/RG-KeyVault/providers/Microsoft.KeyVault/vaults/KeyVaultPierrc"
+                },
+                "secretName": "secretspnPierrcAKS"
+            }
+        },
+        "osDiskSizeGB":{
+            "value": 30
+        },
+        "agentCount":{
+            "value": 3
+        },
+        "agentVMSize":{
+            "value": "Standard_DS2_v2"
+        }
+
+    }
+}
