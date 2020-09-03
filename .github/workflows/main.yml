@@ -40,3 +40,10 @@ jobs:
         AZURE_RESOURCE_GROUP: RG-AKS-000-Basic
         AZURE_TEMPLATE_LOCATION: ./Basic/ARM/azuredeploy.json
         AZURE_TEMPLATE_PARAM_LOCATION: ./Basic/ARM/azuredeploy.parameters.json
+    
+    - name: Installation Kubectl tools installer
+      uses: azure/setup-kubectl@v1
+      with:
+        version: v1.19.0
+      id: install
+      
