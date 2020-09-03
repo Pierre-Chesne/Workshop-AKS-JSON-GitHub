@@ -39,4 +39,4 @@ jobs:
       env:
         AZURE_RESOURCE_GROUP: RG-AKS-000-Basic
         AZURE_TEMPLATE_LOCATION: ./Basic/ARM/azuredeploy.json
-        AZURE_TEMPLATE_PARAM_LOCATION: ./ARM/azuredeploy.parameters.json
+        AZURE_TEMPLATE_PARAM_LOCATION: ./Basic/ARM/azuredeploy.parameters.json
