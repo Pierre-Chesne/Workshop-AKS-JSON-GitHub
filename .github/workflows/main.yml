@@ -40,3 +40,11 @@ jobs:
         AZURE_RESOURCE_GROUP: RG-AKS-000-Basic
         AZURE_TEMPLATE_LOCATION: ./Basic/ARM/azuredeploy.json
         AZURE_TEMPLATE_PARAM_LOCATION: ./Basic/ARM/azuredeploy.parameters.json
+
+    - name: Connection au Cluster
+      uses: azure/aks-set-context@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        resource-group: "RG-AKS-000-Basic"
+        cluster-name: "Clust-AKS-000"
+      id: login
