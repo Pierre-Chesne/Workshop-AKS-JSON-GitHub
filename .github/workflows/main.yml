@@ -40,24 +40,3 @@ jobs:
         AZURE_RESOURCE_GROUP: RG-AKS-000-Basic
         AZURE_TEMPLATE_LOCATION: ./Basic/ARM/azuredeploy.json
         AZURE_TEMPLATE_PARAM_LOCATION: ./Basic/ARM/azuredeploy.parameters.json
-    
-    - name: Installation Kubectl tools installer
-      uses: azure/setup-kubectl@v1
-      with:
-        version: v1.19.0
-      id: install
-
-    - name: AKS get-credentials
-      uses: azure/CLI@v1
-      with:
-        azcliversion: 2.9.0
-        inlineScript: |
-          az aks get-credentials --resource-group RG-AKS-000-Basic --name Clust-AKS-000
-
-    - name: Manifeste Kubernetes
-      uses: Azure/k8s-deploy@v1
-      with:
-        manifests: |
-          azure-vote.yml
-
-      
