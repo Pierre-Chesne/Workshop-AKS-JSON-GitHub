@@ -34,7 +34,7 @@ jobs:
         AZURE_SERVICE_PASSWORD: ${{ secrets.AZURE_SERVICE_PASSWORD }}
         AZURE_SERVICE_TENANT: ${{ secrets.AZURE_SERVICE_TENANT }}
 
-    - names: Azure - Deploy ARM Template
+    - name: Azure - Deploy ARM Template
       uses: Azure/github-actions/arm@master
       env:
         AZURE_RESOURCE_GROUP: RG-AKS-000-Basic
