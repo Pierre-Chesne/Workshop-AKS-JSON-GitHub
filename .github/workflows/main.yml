@@ -1,10 +1,9 @@
 name: Workflow deploiement basic d'un cluster AKS
 on:
   push:
-    branches:
-    - master
-    path:
-    - Applications
+    branches: [maters]    
+    paths:
+    - "Applications/**"
 
 jobs:
   build-and-deploy:
@@ -52,6 +51,7 @@ jobs:
     - name: Installation manifest
       uses: Azure/k8s-deploy@v1
       with:
+        namespace: 'azure-vote'
         manifests: |
           ./Applications/azure-vote.yml
         kubectl-version: 'latest'
