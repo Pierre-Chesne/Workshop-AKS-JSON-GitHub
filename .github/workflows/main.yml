@@ -52,6 +52,6 @@ jobs:
       uses: Azure/k8s-deploy@v1
       with:
         namespace: 'azure-vote'
-        manifests: |
+        manifests: |        
           ./Applications/azure-vote.yml
         kubectl-version: 'latest'
