@@ -50,8 +50,7 @@ jobs:
 
     - name: Installation manifest
       uses: Azure/k8s-deploy@v1
-      with:
-        namespace: 'azure-vote'
+      with:        
         manifests: |        
-          ./Applications/azure-vote.yml
+          ./Applications/name_space.yml
         kubectl-version: 'latest'

@@ -1,9 +1,5 @@
 ---
 apiVersion: apps/v1
-kind: Namespace
-metadata: Azure-Vote  
----
-apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: azure-vote-back
