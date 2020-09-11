@@ -2,8 +2,8 @@ name: Workflow deploiement basic d'un cluster AKS
 on:
   push:
     branches: [master]        
-    paths:
-    - "Applications/**"
+    #paths:
+    #- "Applications/**"
 
 jobs:
   build-and-deploy:
