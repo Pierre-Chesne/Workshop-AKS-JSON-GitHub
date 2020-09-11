@@ -61,5 +61,4 @@ jobs:
         namespace: azure-vote      
         manifests: |        
           ./Applications/azure-vote.yml
-        kubectl-version: 'latest'
-        
+        kubectl-version: 'latest'        
