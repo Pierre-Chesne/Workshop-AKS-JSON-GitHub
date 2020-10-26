@@ -2,4 +2,4 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: azure-vote  
+  name: azure-vote
