@@ -80,5 +80,4 @@ spec:
   ports:
   - port: 80
   selector:
-    app: azure-vote-front
-    
+    app: azure-vote-front    
